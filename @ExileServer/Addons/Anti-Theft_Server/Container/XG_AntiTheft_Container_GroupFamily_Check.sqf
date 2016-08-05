@@ -22,4 +22,8 @@ else
 		_ret = [_player,_vehicle,_family,_vehicleInfo] call XG_AntiTheft_Container_NoGroup;
 	};
 };
+if!(_ret) then
+{
+	[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
+};
 _ret

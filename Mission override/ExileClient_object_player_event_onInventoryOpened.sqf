@@ -10,7 +10,6 @@
  */
  
 private["_cancelEvent","_container"];
-systemChat "Inventory Opened";
 _cancelEvent = false;
 _container = _this select 1;
 try 
@@ -50,6 +49,7 @@ try
 			{
 				if!((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
 					throw true;
 				};
 			}
@@ -57,6 +57,7 @@ try
 			{
 				if!((getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
 					throw true;
 				};
 			};
@@ -67,6 +68,7 @@ try
 			{
 				if!((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
 					throw true;
 				};
 			}
@@ -74,6 +76,7 @@ try
 			{
 				if!((str(group player) isEqualTo _group) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
 					throw true;
 				};
 			};
