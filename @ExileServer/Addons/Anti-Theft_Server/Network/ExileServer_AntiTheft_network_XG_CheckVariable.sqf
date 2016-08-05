@@ -13,6 +13,7 @@ if!(_vehicleInfo isEqualTo []) then
 				_holder = "LootWeaponHolder" createVehicle position _player;
 				_player action["Gear", _holder];
 				deleteVehicle _holder;
+				[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
 			}
 			else
 			{
@@ -41,6 +42,7 @@ if!(_vehicleInfo isEqualTo []) then
 				_holder = "LootWeaponHolder" createVehicle position _player;
 				_player action["Gear", _holder];
 				deleteVehicle _holder;
+				[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
 			}
 			else
 			{
@@ -72,6 +74,7 @@ if!(_vehicleInfo isEqualTo []) then
 				_holder = "LootWeaponHolder" createVehicle position _player;
 				_player action["Gear", _holder];
 				deleteVehicle _holder;
+				[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
 			}
 			else
 			{
@@ -100,6 +103,7 @@ if!(_vehicleInfo isEqualTo []) then
 				_holder = "LootWeaponHolder" createVehicle position _player;
 				_player action["Gear", _holder];
 				deleteVehicle _holder;
+				[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
 			}
 			else
 			{
