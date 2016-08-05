@@ -2,12 +2,10 @@ params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehi
 _vehicleInfo params [["_group",""],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
 if!((getPlayerUID _player) isEqualTo _ownerUID) then
 {
-	diag_log "exec p1";
 	_player action["Eject", _vehicle];
 }
 else
 {
-	diag_log "exec p2";
 	if!(str(group _player) isEqualTo _group) then
 	{
 		_group = str(group _player);

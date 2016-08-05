@@ -1,6 +1,5 @@
 params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehicleInfo",[]]];
 _vehicleInfo params [["_group",""],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
-diag_log str _vehicleInfo;
 if(_group isEqualTo "No Group") then
 {
 	diag_log "p1";
