@@ -5,7 +5,7 @@ _playerEvhid = _player addEventHandler ["GetInMan",
 	_vehicleInfo = _vehicle getVariable ["XG_AntiTheftInfo",[]];
 	if(_vehicleInfo isEqualTo []) then 
 	{
-		["XG_EnterSafeZone",[_vehicle,_player]] call ExileClient_system_network_send;
+		[_vehicle,_player] call XG_AntiTheft_Getin_setVariable;
 	};
 }];
 _player setVariable ["XG_PlayerEVHId",[_playerEvhid],true];

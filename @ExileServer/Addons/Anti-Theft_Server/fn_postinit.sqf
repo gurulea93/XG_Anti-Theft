@@ -30,5 +30,8 @@
 	["XG_AntiTheft_Getin","XG_AntiTheft\EventHaners\XG_AntiTheft_Getin.sqf"],
 
 	//Checks
-	["XG_AntiTheft_Getin_Check","XG_AntiTheft\Getin\XG_AntiTheft_Getin_Check.sqf"]
+	["XG_AntiTheft_Getin_Check","XG_AntiTheft\Getin\XG_AntiTheft_Getin_Check.sqf"],
+
+	//Set Vars
+	["XG_AntiTheft_GetIn_SetVariable","XG_AntiTheft\Getin\XG_AntiTheft_GetIn_SetVariable.sqf"]
 ];

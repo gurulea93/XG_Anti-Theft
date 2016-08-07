@@ -41,8 +41,8 @@ try
 	_vehicleInfo = _container getVariable ["XG_AntiTheftInfo",[]];
 	if!(_vehicleInfo isEqualTo []) then
 	{
-		_family = player getVariable ["ExileClanID","No Family"];
-		_vehicleInfo params [["_group",0],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
+		_family = player getVariable ["ExileClanID",""];
+		_vehicleInfo params [["_group",""],["_vifamily",""],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
 		if(_group isEqualTo "No Group") then
 		{
 			if!(_family isEqualTo "No Family") then
