@@ -15,7 +15,7 @@ else
 {
 	_toAdd pushBack _family;
 };
-_evhID = _vehicle addEventHandler ["GetIn",{_this call XG_AntiTheft_Getin}];
+_evhID = _vehicle addEventHandler ["GetIn",{diag_log str "GetIn"; _this call XG_AntiTheft_Getin}];
 _toAdd pushBack _evhID;
 _toAdd pushBack (getPlayerUID _player);
 _vehicle setVariable ["XG_AntiTheftInfo",_toAdd,true];

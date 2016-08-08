@@ -49,7 +49,7 @@ try
 			{
 				if!((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
-					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
 				};
 			}
@@ -57,7 +57,7 @@ try
 			{
 				if!((getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
-					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
 				};
 			};
@@ -68,7 +68,7 @@ try
 			{
 				if!((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
 				{
-					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
 				};
 			}

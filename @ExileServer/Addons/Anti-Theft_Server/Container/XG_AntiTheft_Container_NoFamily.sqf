@@ -9,23 +9,22 @@ try
 	}
 	else
 	{
-		if!(str(group _player) isEqualTo _group) then
+		if((getPlayerUID _player) isEqualTo _ownerUID) then
 		{
-			_group = str(group _player);
-			if(_group isEqualTo "R ") then
+			if!(str(group _player) isEqualTo _group) then
 			{
-				_group = "No Group";
+				_group = str(group _player);
+				if(_group isEqualTo "R ") then
+				{
+					_group = "No Group";
+				};
 			};
-		};
-		if!(_family isEqualTo _vifamily) then
-		{
-			if!(_family isEqualTo "No Family") then
+			if!(_family isEqualTo _vifamily) then
 			{
 				_vifamily = _family;
 			};
+			_vehicleInfo = [_group,_vifamily,_evhID,_ownerUID,_evhID1];
 		};
-		_vehicleInfo = [_group,_vifamily,_evhID,_ownerUID,_evhID1];
-		_vehicle setVariable ["XG_AntiTheftInfo",_vehicleInfo,true];
 	};
 }
 catch

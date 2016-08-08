@@ -1,5 +1,6 @@
 params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehicleInfo",[]]];
 _vehicleInfo params [["_group",""],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
+_ret = true;
 if(_group isEqualTo "No Group") then
 {
 	if!(_family isEqualTo "No Family") then
@@ -24,6 +25,6 @@ else
 };
 if!(_ret) then
 {
-	[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
+	[_player,"ToastRequest",["InfoTitleAndText",["Anti-Theft:","This is not your vehicle!"]]] call ExileServer_system_network_send_to;
 };
 _ret

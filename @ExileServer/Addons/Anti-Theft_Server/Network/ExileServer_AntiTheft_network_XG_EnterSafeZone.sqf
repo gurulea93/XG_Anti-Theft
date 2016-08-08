@@ -1,4 +1,4 @@
-(_this select 1) params[["_vehicle",objNull],["_player",objNull]];
+(_this select 1) params [["_vehicle",objNull],["_player",objNull]];
 _vehicleInfo = _vehicle getVariable ["XG_AntiTheftInfo",[]];
 if!(_vehicleInfo isEqualTo []) then 
 {

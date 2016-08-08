@@ -6,5 +6,5 @@ if!(_vehicleInfo isEqualTo []) then
 }
 else
 {
-	[_vehicle,_player] call XG_AntiTheft_setVariable;
+	[_vehicle,_player] call XG_AntiTheft_Getin_setVariable;
 };
