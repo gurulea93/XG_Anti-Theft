@@ -1,10 +1,5 @@
 class CfgNetworkMessages
 {
-	class KillMessages
-	{
-		module = "KillMessages";
-		parameters[] = {"STRING","STRING","OBJECT","OBJECT"};
-	};
     class XG_EnterSafeZone 
     {
         module = "AntiTheft";
