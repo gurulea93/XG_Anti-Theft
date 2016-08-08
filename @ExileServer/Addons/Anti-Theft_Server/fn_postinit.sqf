@@ -1,3 +1,20 @@
+/*
+	Project:
+		XG_Anti-Theft
+
+	Authors:
+		[XG] StokesMagee:
+			www.xexgaming.com
+
+	Credits:
+		Diamond
+			http://www.legiongaminghq.org/
+		Kuplion
+			https://www.facebook.com/FriendlyPlayerShooting/
+		William Rogers
+			http://www.arma3-dayzrp.com/
+*/
+
 {
 	_x params [["_function",""],["_file",""]];
 	_code = compile (preprocessFileLineNumbers _file);

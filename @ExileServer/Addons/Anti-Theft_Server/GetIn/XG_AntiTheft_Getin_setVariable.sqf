@@ -1,3 +1,20 @@
+/*
+	Project:
+		XG_Anti-Theft
+
+	Authors:
+		[XG] StokesMagee:
+			www.xexgaming.com
+
+	Credits:
+		Diamond
+			http://www.legiongaminghq.org/
+		Kuplion
+			https://www.facebook.com/FriendlyPlayerShooting/
+		William Rogers
+			http://www.arma3-dayzrp.com/
+*/
+
 params [["_vehicle",objNull],["_player",objNull]];
 if(_vehicle getVariable["SC_transport",false]) exitWith {};
 _family = _player getVariable ["ExileClanID","No Family"];

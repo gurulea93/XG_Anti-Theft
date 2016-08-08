@@ -1,3 +1,20 @@
+/*
+	Project:
+		XG_Anti-Theft
+
+	Authors:
+		[XG] StokesMagee:
+			www.xexgaming.com
+
+	Credits:
+		Diamond
+			http://www.legiongaminghq.org/
+		Kuplion
+			https://www.facebook.com/FriendlyPlayerShooting/
+		William Rogers
+			http://www.arma3-dayzrp.com/
+*/
+
 params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehicleInfo",[]]];
 _vehicleInfo params [["_group",""],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
 if!((str(group _player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID _player) isEqualTo _ownerUID) then

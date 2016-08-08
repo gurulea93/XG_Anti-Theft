@@ -1,8 +1,25 @@
+/*
+	Project:
+		XG_Anti-Theft
+
+	Authors:
+		[XG] StokesMagee:
+			www.xexgaming.com
+
+	Credits:
+		Diamond
+			http://www.legiongaminghq.org/
+		Kuplion
+			https://www.facebook.com/FriendlyPlayerShooting/
+		William Rogers
+			http://www.arma3-dayzrp.com/
+*/
+
 class CfgPatches
 {
 	class XG_AntiTheft
 	{
-		requiredVersion = 0.1977;
+		requiredVersion = 1;
 		requiredAddons[] = {};
 		units[] = {};
 		weapons[] = {};

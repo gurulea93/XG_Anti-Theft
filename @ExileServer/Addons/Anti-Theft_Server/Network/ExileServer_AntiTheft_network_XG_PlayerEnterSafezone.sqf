@@ -1,3 +1,20 @@
+/*
+	Project:
+		XG_Anti-Theft
+
+	Authors:
+		[XG] StokesMagee:
+			www.xexgaming.com
+
+	Credits:
+		Diamond
+			http://www.legiongaminghq.org/
+		Kuplion
+			https://www.facebook.com/FriendlyPlayerShooting/
+		William Rogers
+			http://www.arma3-dayzrp.com/
+*/
+
 (_this select 1) params [["_player",objNull]];
 _playerEvhid = _player addEventHandler ["GetInMan",
 {
