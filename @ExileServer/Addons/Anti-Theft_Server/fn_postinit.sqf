@@ -27,7 +27,7 @@
 
 	//EventHandlers
 	["XG_AntiTheft_ContainerOpened","XG_AntiTheft\EventHandlers\XG_AntiTheft_ContainerOpened.sqf"],
-	["XG_AntiTheft_Getin","XG_AntiTheft\EventHaners\XG_AntiTheft_Getin.sqf"],
+	["XG_AntiTheft_Getin","XG_AntiTheft\EventHandlers\XG_AntiTheft_Getin.sqf"],
 
 	//Checks
 	["XG_AntiTheft_Getin_Check","XG_AntiTheft\Getin\XG_AntiTheft_Getin_Check.sqf"],
