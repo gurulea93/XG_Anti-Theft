@@ -1,6 +1,6 @@
 params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehicleInfo",[]]];
 _vehicleInfo params [["_group",""],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
-if!((str(group _player) isEqualTo _group) || (getPlayerUID _player) isEqualTo _ownerUID) then
+if!((getPlayerUID _player) isEqualTo _ownerUID) then
 {
 	_player action["Eject", _vehicle];
 	[_player,"ToastRequest",["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]]] call ExileServer_system_network_send_to;

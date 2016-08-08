@@ -1,6 +1,6 @@
 {
 	_x params [["_function",""],["_file",""]];
-	_code = compileFinal (preprocessFileLineNumbers _file);
+	_code = compile (preprocessFileLineNumbers _file);
 	missionNamespace setVariable [_function,_code];
 } forEach
 [
