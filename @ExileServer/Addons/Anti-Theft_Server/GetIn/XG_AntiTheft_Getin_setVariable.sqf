@@ -1,4 +1,5 @@
 params [["_vehicle",objNull],["_player",objNull]];
+if(_vehicle getVariable["SC_transport",false]) exitWith {};
 _family = _player getVariable ["ExileClanID","No Family"];
 _toAdd = [];
 _group = str(group _player);
