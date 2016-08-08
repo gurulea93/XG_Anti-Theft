@@ -11,6 +11,7 @@ and add:
 Example:
 ![example1](http://puu.sh/qtQoU/5020827e15.png)
 ####2. Go into the download and copy the Anti-Theft folder into your missionFile.
+####3. Copy the content from CfgNetworkMessages.hpp (in the download) and put it / marge it into your description.ext
 
 ###Server:
 ####1. Go to your @ExileServer\Addons and depbo exile_server.pbo
