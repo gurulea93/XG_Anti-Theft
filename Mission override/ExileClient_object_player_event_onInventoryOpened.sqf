@@ -42,12 +42,16 @@ try
 	if!(_vehicleInfo isEqualTo []) then
 	{
 		_family = player getVariable ["ExileClanID",""];
+		if(_family isEqualTo -1) then
+		{
+			_family = "No Family";
+		};
 		_vehicleInfo params [["_group",""],["_vifamily",""],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
 		if(_group isEqualTo "No Group") then
 		{
 			if!(_family isEqualTo "No Family") then
 			{
-				if!((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
+				if!((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
 					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
@@ -55,7 +59,7 @@ try
 			}
 			else
 			{
-				if!((getPlayerUID player) isEqualTo _ownerUID) exitWith
+				if!((getPlayerUID player) isEqualTo _ownerUID) then
 				{
 					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
@@ -66,7 +70,7 @@ try
 		{
 			if!(_family isEqualTo "No Family") then
 			{
-				if!((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
+				if!((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
 					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
@@ -74,7 +78,7 @@ try
 			}
 			else
 			{
-				if!((str(group player) isEqualTo _group) || (getPlayerUID player) isEqualTo _ownerUID) exitWith
+				if!((str(group player) isEqualTo _group) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
 					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
 					throw true;
