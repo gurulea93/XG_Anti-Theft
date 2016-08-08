@@ -52,3 +52,15 @@
 	//Set Vars
 	["XG_AntiTheft_GetIn_SetVariable","XG_AntiTheft\Getin\XG_AntiTheft_GetIn_SetVariable.sqf"]
 ];
+[] spawn
+{
+	waitUntil { (time > 0) && PublicServerIsLoaded };
+	_code =
+	{
+		{
+			_clanID = _x getVariable ["ExileClanID", -1];
+			_x setVariable ["ExileClanID",_clanID,true]; 
+		} forEach AllPlayers;
+	};
+	[60,_code,[],true] call ExileServer_system_thread_addTask;
+};

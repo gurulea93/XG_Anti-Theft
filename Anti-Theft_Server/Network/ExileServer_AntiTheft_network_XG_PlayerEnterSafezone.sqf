@@ -26,8 +26,3 @@ _playerEvhid = _player addEventHandler ["GetInMan",
 	};
 }];
 _player setVariable ["XG_PlayerEVHId",[_playerEvhid],true];
-
-{
-	_clanID = _x getVariable ["ExileClanID", -1];
-	_x setVariable ["ExileClanID",_clanID,true]; 
-} forEach AllPlayers;
