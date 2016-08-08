@@ -27,3 +27,6 @@ Example:
 		https://www.facebook.com/FriendlyPlayerShooting/
 	William Rogers
 		http://www.arma3-dayzrp.com/
+#Pictures:
+![pic1](http://puu.sh/qtR5B/bba371f560.jpg)
+![pic2](http://puu.sh/qtR4t/9821e787c2.jpg)
