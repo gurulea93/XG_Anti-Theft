@@ -19,9 +19,9 @@
 _vehicleInfo = _vehicle getVariable ["XG_AntiTheftInfo",[]];
 if!(_vehicleInfo isEqualTo []) then
 {
-	[_player,_vehicle,_vehicleInfo] call XG_AntiTheft_Getin_Check;
+	[_player,_vehicle,_vehicleInfo] call XG_AntiTheft_Check;
 }
 else
 {
-	[_vehicle,_player] call XG_AntiTheft_Getin_setVariable;
+	[_vehicle,_player] call XG_AntiTheft_Check_SetVariable;
 };

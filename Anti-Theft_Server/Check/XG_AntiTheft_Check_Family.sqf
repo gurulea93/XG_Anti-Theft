@@ -16,11 +16,11 @@
 */
 
 params [["_player",objNull],["_vehicle",objNull],["_family","No Family"],["_vehicleInfo",[]]];
-_vehicleInfo params [["_group",""],["_vifamily","No Family"],["_evhID",-1],["_ownerUID",""],["_evhID1",-1]];
+_vehicleInfo params [["_group",""],["_vifamily","No Family"],["_ownerUID",""]];
 _ret = true;
 try
 {
-	if!((getPlayerUID _player) isEqualTo _ownerUID) then
+	if!((_family isEqualTo _vifamily) || (getPlayerUID _player) isEqualTo _ownerUID) then
 	{
 		throw false;
 	}
@@ -40,8 +40,8 @@ try
 			{
 				_vifamily = _family;
 			};
-			_vehicleInfo = [_group,_vifamily,_evhID,_ownerUID,_evhID1];
 		};
+		_ret = [_group,_vifamily,_ownerUID];
 	};
 }
 catch

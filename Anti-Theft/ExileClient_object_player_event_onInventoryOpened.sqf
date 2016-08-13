@@ -41,7 +41,7 @@ try
 	_vehicleInfo = _container getVariable ["XG_AntiTheftInfo",[]];
 	if!(_vehicleInfo isEqualTo []) then
 	{
-		_vehicleInfo params [["_group",""],["_vifamily",""],["_evhID",-1],["_ownerUID",""],["_evhID1",-1],"_family"];
+		_vehicleInfo params [["_group",""],["_vifamily","No Family"],["_ownerUID",""]];
 		_family = player getVariable ["ExileClanID",""];
 		if(_family isEqualTo -1) then
 		{
@@ -80,7 +80,7 @@ try
 			{
 				if!((str(group player) isEqualTo _group) || (getPlayerUID player) isEqualTo _ownerUID) then
 				{
-					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addToast;
+					["ErrorTitleAndText",["Anti-Theft","This is not your vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
 					throw true;
 				};
 			};

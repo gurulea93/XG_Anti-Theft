@@ -17,20 +17,44 @@ _localVehicles = [];
 	_vehicleInfo = _x getVariable ["XG_AntiTheftInfo",[]];
 	if!(_vehicleInfo isEqualTo []) then
 	{
-		_vehicleInfo params [["_group",0],["_vifamily",-2],["_evhID",-1],["_ownerUID",""]];
-		_family = player getVariable ["ExileClanID",-1];
+		_vehicleInfo params [["_group",""],["_vifamily","No Family"],["_ownerUID",""]];
+		_family = player getVariable ["ExileClanID",""];
+		if(_family isEqualTo -1) then
+		{
+			_family = "No Family";
+		};
 		if(_group isEqualTo "No Group") then
 		{
-			if ((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
+			if!(_family isEqualTo "No Family") then
 			{
-				_localVehicles pushBack _x;
+				if((_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
+				{
+					_localVehicles pushBack _x;
+				};
+			}
+			else
+			{
+				if((getPlayerUID player) isEqualTo _ownerUID) then
+				{
+					_localVehicles pushBack _x;
+				};
 			};
 		}
 		else
 		{
-			if ((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
+			if!(_family isEqualTo "No Family") then
 			{
-				_localVehicles pushBack _x;
+				if((str(group player) isEqualTo _group) || (_family isEqualTo _vifamily) || (getPlayerUID player) isEqualTo _ownerUID) then
+				{
+					_localVehicles pushBack _x;
+				};
+			}
+			else
+			{
+				if((str(group player) isEqualTo _group) || (getPlayerUID player) isEqualTo _ownerUID) then
+				{
+					_localVehicles pushBack _x;
+				};
 			};
 		};
 	}

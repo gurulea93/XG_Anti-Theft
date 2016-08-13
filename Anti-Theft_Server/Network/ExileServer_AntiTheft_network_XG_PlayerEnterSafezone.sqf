@@ -22,7 +22,7 @@ _playerEvhid = _player addEventHandler ["GetInMan",
 	_vehicleInfo = _vehicle getVariable ["XG_AntiTheftInfo",[]];
 	if(_vehicleInfo isEqualTo []) then 
 	{
-		[_vehicle,_player] call XG_AntiTheft_Getin_setVariable;
+		[_vehicle,_player] call XG_AntiTheft_Check_setVariable;
 	};
 }];
 _player setVariable ["XG_PlayerEVHId",[_playerEvhid],true];
