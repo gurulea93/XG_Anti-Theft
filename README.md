@@ -4,7 +4,7 @@
 ###Миссия:
 ####1. Go into your missionFile, and open your config.cpp, find
     class CfgExileCustomCode
-    Открываем ваш файл миссии, открыть config.cpp и найти
+####1. Открываем ваш файл миссии, открыть config.cpp и найти
     class CfgExileCustomCode
 and add:
 добавить:
